@@ -3,9 +3,11 @@
 // Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
 
 using System;
+using System.Drawing;
+using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using CefSharp.Example;
-using System.Threading.Tasks;
 
 namespace CefSharp.WinForms.Example
 {
@@ -42,7 +44,8 @@ namespace CefSharp.WinForms.Example
 
             var tabPage = new TabPage(url)
             {
-                Dock = DockStyle.Fill
+                Dock = DockStyle.Fill,
+                BackColor = Color.Black
             };
 
             //This call isn't required for the sample to work. 
@@ -117,9 +120,15 @@ namespace CefSharp.WinForms.Example
             AddTab(DefaultUrlForAddedTabs);
         }
 
+        private void NewTestTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("bin")), "TestFiles", "Test.html");
+            AddTab(path);
+        }
+
         private void CloseTabToolStripMenuItemClick(object sender, EventArgs e)
         {
-            if(browserTabControl.Controls.Count == 0)
+            if (browserTabControl.Controls.Count == 0)
             {
                 return;
             }

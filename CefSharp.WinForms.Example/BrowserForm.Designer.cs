@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NewTestTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +76,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newTabToolStripMenuItem,
+            this.NewTestTabToolStripMenuItem,
             this.closeTabToolStripMenuItem,
             this.printToolStripMenuItem,
             this.aboutToolStripMenuItem,
@@ -93,6 +95,13 @@
             this.newTabToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.newTabToolStripMenuItem.Text = "&New Tab";
             this.newTabToolStripMenuItem.Click += new System.EventHandler(this.NewTabToolStripMenuItemClick);
+            // 
+            // NewTestTabToolStripMenuItem
+            // 
+            this.NewTestTabToolStripMenuItem.Name = "NewTestTabToolStripMenuItem";
+            this.NewTestTabToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.NewTestTabToolStripMenuItem.Text = "New Test Tab";
+            this.NewTestTabToolStripMenuItem.Click += new System.EventHandler(this.NewTestTabToolStripMenuItem_Click);
             // 
             // closeTabToolStripMenuItem
             // 
@@ -319,6 +328,7 @@
         private System.Windows.Forms.ToolStripMenuItem zoomInToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zoomOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem currentZoomLevelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem NewTestTabToolStripMenuItem;
 
     }
 }

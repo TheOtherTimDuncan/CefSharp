@@ -138,6 +138,12 @@ namespace CefSharp
             void set(bool value) { _cefSettings->persist_session_cookies = value; }
         }
 
+        virtual property int BackgroundColor
+        {
+            int get() { return _cefSettings->background_color; }
+            void set(int value) { _cefSettings->background_color = value; }
+        }
+
         /// <summary>
         /// Registers a custom scheme using the provided settings.
         /// </summary>
